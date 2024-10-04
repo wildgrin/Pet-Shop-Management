@@ -21,5 +21,35 @@ namespace Pet_Shop_Management
         {
             Application.Exit();
         }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCash_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LogoutButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -42,42 +42,43 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            panel6 = new Panel();
+            btnLogout = new Panel();
             panel5 = new Panel();
             panel4 = new Panel();
             label1 = new Label();
             Role = new Label();
-            DashboardButton = new Guna.UI2.WinForms.Guna2Button();
-            CustomerButton = new Guna.UI2.WinForms.Guna2Button();
-            UserButton = new Guna.UI2.WinForms.Guna2Button();
-            ProductButton = new Guna.UI2.WinForms.Guna2Button();
+            btnDashboard = new Guna.UI2.WinForms.Guna2Button();
+            btnCustomer = new Guna.UI2.WinForms.Guna2Button();
+            btnUser = new Guna.UI2.WinForms.Guna2Button();
+            btnProduct = new Guna.UI2.WinForms.Guna2Button();
             LogoutButton = new Guna.UI2.WinForms.Guna2Button();
-            CashButton = new Guna.UI2.WinForms.Guna2Button();
+            btnCash = new Guna.UI2.WinForms.Guna2Button();
             panel3 = new Panel();
             btnClose = new Guna.UI2.WinForms.Guna2Button();
             panel2 = new Panel();
             panel1 = new Panel();
             panelChile = new Panel();
+            MainFormWelcome = new Label();
             panel4.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
-            // panel6
+            // btnLogout
             // 
-            panel6.Dock = DockStyle.Top;
-            panel6.Location = new Point(195, 291);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(803, 246);
-            panel6.TabIndex = 5;
+            btnLogout.Dock = DockStyle.Top;
+            btnLogout.Location = new Point(183, 291);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(815, 246);
+            btnLogout.TabIndex = 5;
             // 
             // panel5
             // 
             panel5.BackColor = Color.FromArgb(3, 172, 220);
             panel5.Dock = DockStyle.Top;
-            panel5.Location = new Point(195, 285);
+            panel5.Location = new Point(183, 285);
             panel5.Name = "panel5";
-            panel5.Size = new Size(803, 6);
+            panel5.Size = new Size(815, 6);
             panel5.TabIndex = 4;
             // 
             // panel4
@@ -87,14 +88,14 @@
             panel4.Dock = DockStyle.Top;
             panel4.Location = new Point(0, 0);
             panel4.Name = "panel4";
-            panel4.Size = new Size(195, 125);
+            panel4.Size = new Size(183, 98);
             panel4.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(61, 41);
+            label1.Location = new Point(56, 21);
             label1.Name = "label1";
             label1.Size = new Size(80, 20);
             label1.TabIndex = 0;
@@ -104,83 +105,87 @@
             // 
             Role.AutoSize = true;
             Role.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Role.Location = new Point(74, 79);
+            Role.Location = new Point(78, 60);
             Role.Name = "Role";
             Role.Size = new Size(40, 20);
             Role.TabIndex = 1;
             Role.Text = "Role";
             // 
-            // DashboardButton
+            // btnDashboard
             // 
-            DashboardButton.CustomizableEdges = customizableEdges1;
-            DashboardButton.DisabledState.BorderColor = Color.DarkGray;
-            DashboardButton.DisabledState.CustomBorderColor = Color.DarkGray;
-            DashboardButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            DashboardButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            DashboardButton.Dock = DockStyle.Top;
-            DashboardButton.FillColor = Color.Transparent;
-            DashboardButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            DashboardButton.ForeColor = Color.DarkGray;
-            DashboardButton.Location = new Point(0, 125);
-            DashboardButton.Name = "DashboardButton";
-            DashboardButton.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            DashboardButton.Size = new Size(195, 38);
-            DashboardButton.TabIndex = 0;
-            DashboardButton.Text = "Dashboard";
+            btnDashboard.CustomizableEdges = customizableEdges1;
+            btnDashboard.DisabledState.BorderColor = Color.DarkGray;
+            btnDashboard.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnDashboard.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnDashboard.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnDashboard.Dock = DockStyle.Top;
+            btnDashboard.FillColor = Color.Transparent;
+            btnDashboard.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDashboard.ForeColor = Color.DarkGray;
+            btnDashboard.Location = new Point(0, 98);
+            btnDashboard.Name = "btnDashboard";
+            btnDashboard.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnDashboard.Size = new Size(183, 38);
+            btnDashboard.TabIndex = 0;
+            btnDashboard.Text = "Dashboard";
+            btnDashboard.Click += btnDashboard_Click;
             // 
-            // CustomerButton
+            // btnCustomer
             // 
-            CustomerButton.CustomizableEdges = customizableEdges3;
-            CustomerButton.DisabledState.BorderColor = Color.DarkGray;
-            CustomerButton.DisabledState.CustomBorderColor = Color.DarkGray;
-            CustomerButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            CustomerButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            CustomerButton.Dock = DockStyle.Top;
-            CustomerButton.FillColor = Color.Transparent;
-            CustomerButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            CustomerButton.ForeColor = Color.DarkGray;
-            CustomerButton.Location = new Point(0, 163);
-            CustomerButton.Name = "CustomerButton";
-            CustomerButton.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            CustomerButton.Size = new Size(195, 38);
-            CustomerButton.TabIndex = 1;
-            CustomerButton.Text = "Customer";
+            btnCustomer.CustomizableEdges = customizableEdges3;
+            btnCustomer.DisabledState.BorderColor = Color.DarkGray;
+            btnCustomer.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnCustomer.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnCustomer.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnCustomer.Dock = DockStyle.Top;
+            btnCustomer.FillColor = Color.Transparent;
+            btnCustomer.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCustomer.ForeColor = Color.DarkGray;
+            btnCustomer.Location = new Point(0, 136);
+            btnCustomer.Name = "btnCustomer";
+            btnCustomer.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnCustomer.Size = new Size(183, 38);
+            btnCustomer.TabIndex = 1;
+            btnCustomer.Text = "Customer";
+            btnCustomer.Click += btnCustomer_Click;
             // 
-            // UserButton
+            // btnUser
             // 
-            UserButton.CustomizableEdges = customizableEdges5;
-            UserButton.DisabledState.BorderColor = Color.DarkGray;
-            UserButton.DisabledState.CustomBorderColor = Color.DarkGray;
-            UserButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            UserButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            UserButton.Dock = DockStyle.Top;
-            UserButton.FillColor = Color.Transparent;
-            UserButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            UserButton.ForeColor = Color.DarkGray;
-            UserButton.Location = new Point(0, 201);
-            UserButton.Name = "UserButton";
-            UserButton.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            UserButton.Size = new Size(195, 38);
-            UserButton.TabIndex = 2;
-            UserButton.Text = "User";
+            btnUser.CustomizableEdges = customizableEdges5;
+            btnUser.DisabledState.BorderColor = Color.DarkGray;
+            btnUser.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnUser.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnUser.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnUser.Dock = DockStyle.Top;
+            btnUser.FillColor = Color.Transparent;
+            btnUser.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnUser.ForeColor = Color.DarkGray;
+            btnUser.Location = new Point(0, 174);
+            btnUser.Name = "btnUser";
+            btnUser.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnUser.Size = new Size(183, 38);
+            btnUser.TabIndex = 2;
+            btnUser.Text = "User";
+            btnUser.Click += btnUser_Click;
             // 
-            // ProductButton
+            // btnProduct
             // 
-            ProductButton.CustomizableEdges = customizableEdges7;
-            ProductButton.DisabledState.BorderColor = Color.DarkGray;
-            ProductButton.DisabledState.CustomBorderColor = Color.DarkGray;
-            ProductButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            ProductButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            ProductButton.Dock = DockStyle.Top;
-            ProductButton.FillColor = Color.Transparent;
-            ProductButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ProductButton.ForeColor = Color.DarkGray;
-            ProductButton.Location = new Point(0, 239);
-            ProductButton.Name = "ProductButton";
-            ProductButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            ProductButton.Size = new Size(195, 38);
-            ProductButton.TabIndex = 3;
-            ProductButton.Text = "Product";
+            btnProduct.CustomizableEdges = customizableEdges7;
+            btnProduct.DisabledState.BorderColor = Color.DarkGray;
+            btnProduct.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnProduct.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnProduct.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnProduct.Dock = DockStyle.Top;
+            btnProduct.FillColor = Color.Transparent;
+            btnProduct.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnProduct.ForeColor = Color.DarkGray;
+            btnProduct.Location = new Point(0, 212);
+            btnProduct.Name = "btnProduct";
+            btnProduct.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnProduct.Size = new Size(183, 38);
+            btnProduct.TabIndex = 3;
+            btnProduct.Text = "Product";
+            btnProduct.Click += btnProduct_Click;
             // 
             // LogoutButton
             // 
@@ -193,44 +198,46 @@
             LogoutButton.FillColor = Color.Transparent;
             LogoutButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LogoutButton.ForeColor = Color.DarkGray;
-            LogoutButton.Location = new Point(0, 434);
+            LogoutButton.Location = new Point(0, 418);
             LogoutButton.Name = "LogoutButton";
             LogoutButton.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            LogoutButton.Size = new Size(195, 38);
+            LogoutButton.Size = new Size(183, 54);
             LogoutButton.TabIndex = 5;
             LogoutButton.Text = "Logout";
+            LogoutButton.Click += LogoutButton_Click;
             // 
-            // CashButton
+            // btnCash
             // 
-            CashButton.CustomizableEdges = customizableEdges11;
-            CashButton.DisabledState.BorderColor = Color.DarkGray;
-            CashButton.DisabledState.CustomBorderColor = Color.DarkGray;
-            CashButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            CashButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            CashButton.Dock = DockStyle.Top;
-            CashButton.FillColor = Color.Transparent;
-            CashButton.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            CashButton.ForeColor = Color.DarkGray;
-            CashButton.Location = new Point(0, 277);
-            CashButton.Name = "CashButton";
-            CashButton.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            CashButton.Size = new Size(195, 38);
-            CashButton.TabIndex = 4;
-            CashButton.Text = "Cash";
+            btnCash.CustomizableEdges = customizableEdges11;
+            btnCash.DisabledState.BorderColor = Color.DarkGray;
+            btnCash.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnCash.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnCash.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnCash.Dock = DockStyle.Top;
+            btnCash.FillColor = Color.Transparent;
+            btnCash.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCash.ForeColor = Color.DarkGray;
+            btnCash.Location = new Point(0, 250);
+            btnCash.Name = "btnCash";
+            btnCash.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnCash.Size = new Size(183, 38);
+            btnCash.TabIndex = 4;
+            btnCash.Text = "Cash";
+            btnCash.Click += btnCash_Click;
             // 
             // panel3
             // 
-            panel3.Controls.Add(CashButton);
+            panel3.Controls.Add(btnCash);
             panel3.Controls.Add(LogoutButton);
-            panel3.Controls.Add(ProductButton);
-            panel3.Controls.Add(UserButton);
-            panel3.Controls.Add(CustomerButton);
-            panel3.Controls.Add(DashboardButton);
+            panel3.Controls.Add(btnProduct);
+            panel3.Controls.Add(btnUser);
+            panel3.Controls.Add(btnCustomer);
+            panel3.Controls.Add(btnDashboard);
             panel3.Controls.Add(panel4);
             panel3.Dock = DockStyle.Left;
             panel3.Location = new Point(0, 65);
             panel3.Name = "panel3";
-            panel3.Size = new Size(195, 472);
+            panel3.Size = new Size(183, 472);
             panel3.TabIndex = 2;
             // 
             // btnClose
@@ -247,12 +254,13 @@
             btnClose.Name = "btnClose";
             btnClose.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btnClose.Size = new Size(44, 29);
-            btnClose.TabIndex = 5;
+            btnClose.TabIndex = 0;
             btnClose.Text = "X";
             btnClose.Click += btnClose_Click;
             // 
             // panel2
             // 
+            panel2.Controls.Add(MainFormWelcome);
             panel2.Controls.Add(btnClose);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 0);
@@ -272,17 +280,29 @@
             // panelChile
             // 
             panelChile.Dock = DockStyle.Top;
-            panelChile.Location = new Point(195, 65);
+            panelChile.Location = new Point(183, 65);
             panelChile.Name = "panelChile";
-            panelChile.Size = new Size(803, 220);
+            panelChile.Size = new Size(815, 220);
             panelChile.TabIndex = 3;
+            // 
+            // MainFormWelcome
+            // 
+            MainFormWelcome.AutoSize = true;
+            MainFormWelcome.BackColor = Color.Transparent;
+            MainFormWelcome.Font = new Font("Century", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            MainFormWelcome.ForeColor = Color.FromArgb(3, 172, 220);
+            MainFormWelcome.Location = new Point(129, 13);
+            MainFormWelcome.Name = "MainFormWelcome";
+            MainFormWelcome.Size = new Size(787, 40);
+            MainFormWelcome.TabIndex = 0;
+            MainFormWelcome.Text = "Welcome to the Pet Shop Management System";
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1004, 537);
-            Controls.Add(panel6);
+            Controls.Add(btnLogout);
             Controls.Add(panel5);
             Controls.Add(panelChile);
             Controls.Add(panel3);
@@ -296,26 +316,28 @@
             panel4.PerformLayout();
             panel3.ResumeLayout(false);
             panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel6;
+        private Panel btnLogout;
         private Panel panel5;
         private Panel panel4;
         private Label Role;
         private Label label1;
-        private Guna.UI2.WinForms.Guna2Button DashboardButton;
-        private Guna.UI2.WinForms.Guna2Button CustomerButton;
-        private Guna.UI2.WinForms.Guna2Button UserButton;
-        private Guna.UI2.WinForms.Guna2Button ProductButton;
+        private Guna.UI2.WinForms.Guna2Button btnDashboard;
+        private Guna.UI2.WinForms.Guna2Button btnCustomer;
+        private Guna.UI2.WinForms.Guna2Button btnUser;
+        private Guna.UI2.WinForms.Guna2Button btnProduct;
         private Guna.UI2.WinForms.Guna2Button LogoutButton;
-        private Guna.UI2.WinForms.Guna2Button CashButton;
+        private Guna.UI2.WinForms.Guna2Button btnCash;
         private Panel panel3;
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private Panel panel2;
         private Panel panel1;
         private Panel panelChile;
+        private Label MainFormWelcome;
     }
 }
