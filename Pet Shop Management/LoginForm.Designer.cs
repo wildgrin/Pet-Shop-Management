@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             label3 = new Label();
             label2 = new Label();
@@ -43,7 +43,7 @@
             guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             LoginButton = new Button();
             ForgetPass = new Button();
-            CloseButton = new Guna.UI2.WinForms.Guna2Button();
+            btnClose = new Guna.UI2.WinForms.Guna2Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -101,7 +101,7 @@
             // 
             // guna2TextBox1
             // 
-            guna2TextBox1.CustomizableEdges = customizableEdges1;
+            guna2TextBox1.CustomizableEdges = customizableEdges7;
             guna2TextBox1.DefaultText = "";
             guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -116,13 +116,13 @@
             guna2TextBox1.PasswordChar = '\0';
             guna2TextBox1.PlaceholderText = "Username";
             guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2TextBox1.Size = new Size(378, 39);
             guna2TextBox1.TabIndex = 0;
             // 
             // guna2TextBox2
             // 
-            guna2TextBox2.CustomizableEdges = customizableEdges3;
+            guna2TextBox2.CustomizableEdges = customizableEdges9;
             guna2TextBox2.DefaultText = "";
             guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             guna2TextBox2.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -137,7 +137,7 @@
             guna2TextBox2.PasswordChar = '\0';
             guna2TextBox2.PlaceholderText = "Password";
             guna2TextBox2.SelectedText = "";
-            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna2TextBox2.Size = new Size(378, 39);
             guna2TextBox2.TabIndex = 1;
             // 
@@ -166,29 +166,29 @@
             ForgetPass.Text = "Forget Password";
             ForgetPass.UseVisualStyleBackColor = true;
             // 
-            // CloseButton
+            // btnClose
             // 
-            CloseButton.CustomizableEdges = customizableEdges5;
-            CloseButton.DisabledState.BorderColor = Color.DarkGray;
-            CloseButton.DisabledState.CustomBorderColor = Color.DarkGray;
-            CloseButton.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            CloseButton.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            CloseButton.FillColor = Color.Red;
-            CloseButton.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            CloseButton.ForeColor = Color.White;
-            CloseButton.Location = new Point(757, 0);
-            CloseButton.Name = "CloseButton";
-            CloseButton.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            CloseButton.Size = new Size(44, 29);
-            CloseButton.TabIndex = 4;
-            CloseButton.Text = "X";
+            btnClose.CustomizableEdges = customizableEdges11;
+            btnClose.DisabledState.BorderColor = Color.DarkGray;
+            btnClose.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnClose.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnClose.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnClose.FillColor = Color.Red;
+            btnClose.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnClose.ForeColor = Color.White;
+            btnClose.Location = new Point(757, 0);
+            btnClose.Name = "btnClose";
+            btnClose.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnClose.Size = new Size(44, 29);
+            btnClose.TabIndex = 4;
+            btnClose.Text = "X";
             // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(CloseButton);
+            Controls.Add(btnClose);
             Controls.Add(ForgetPass);
             Controls.Add(LoginButton);
             Controls.Add(guna2TextBox2);
@@ -216,6 +216,6 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private Button LoginButton;
         private Button ForgetPass;
-        private Guna.UI2.WinForms.Guna2Button CloseButton;
+        private Guna.UI2.WinForms.Guna2Button btnClose;
     }
 }
