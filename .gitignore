@@ -13,3 +13,10 @@ bin/
 obj/
 bin/Debug/
 obj/Debug/
+
+# Ignore NuGet related files
+project.assets.json
+project.nuget.cache
+*.nuget.dgspec.json
+*.nuget.g.props
+*.nuget.g.targets
