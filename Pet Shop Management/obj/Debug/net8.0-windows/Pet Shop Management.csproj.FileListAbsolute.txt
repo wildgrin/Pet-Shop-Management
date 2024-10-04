@@ -1,0 +1,22 @@
+C:\Users\anshu\source\repos\Pet Shop Management\Pet Shop Management\bin\Debug\net8.0-windows\Pet Shop Management.exe
+C:\Users\anshu\source\repos\Pet Shop Management\Pet Shop Management\bin\Debug\net8.0-windows\Pet Shop Management.deps.json
+C:\Users\anshu\source\repos\Pet Shop Management\Pet Shop Management\bin\Debug\net8.0-windows\Pet Shop Management.runtimeconfig.json
+C:\Users\anshu\source\repos\Pet Shop Management\Pet Shop Management\bin\Debug\net8.0-windows\Pet Shop Management.dll
+C:\Users\anshu\source\repos\Pet Shop Management\Pet Shop Management\bin\Debug\net8.0-windows\Pet Shop Management.pdb
+C:\Users\anshu\source\repos\Pet Shop Management\Pet Shop Management\bin\Debug\net8.0-windows\Guna.UI2.dll
+C:\Users\anshu\source\repos\Pet Shop Management\Pet Shop Management\bin\Debug\net8.0-windows\System.Management.dll
+C:\Users\anshu\source\repos\Pet Shop Management\Pet Shop Management\bin\Debug\net8.0-windows\runtimes\win\lib\net7.0\System.Management.dll
+C:\Users\anshu\source\repos\Pet Shop Management\Pet Shop Management\obj\Debug\net8.0-windows\Pet Shop Management.csproj.AssemblyReference.cache
+C:\Users\anshu\source\repos\Pet Shop Management\Pet Shop Management\obj\Debug\net8.0-windows\Pet_Shop_Management.Form1.resources
+C:\Users\anshu\source\repos\Pet Shop Management\Pet Shop Management\obj\Debug\net8.0-windows\Pet Shop Management.csproj.GenerateResource.cache
+C:\Users\anshu\source\repos\Pet Shop Management\Pet Shop Management\obj\Debug\net8.0-windows\Pet Shop Management.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anshu\source\repos\Pet Shop Management\Pet Shop Management\obj\Debug\net8.0-windows\Pet Shop Management.AssemblyInfoInputs.cache
+C:\Users\anshu\source\repos\Pet Shop Management\Pet Shop Management\obj\Debug\net8.0-windows\Pet Shop Management.AssemblyInfo.cs
+C:\Users\anshu\source\repos\Pet Shop Management\Pet Shop Management\obj\Debug\net8.0-windows\Pet Shop Management.csproj.CoreCompileInputs.cache
+C:\Users\anshu\source\repos\Pet Shop Management\Pet Shop Management\obj\Debug\net8.0-windows\Pet Shop.7486887C.Up2Date
+C:\Users\anshu\source\repos\Pet Shop Management\Pet Shop Management\obj\Debug\net8.0-windows\Pet Shop Management.dll
+C:\Users\anshu\source\repos\Pet Shop Management\Pet Shop Management\obj\Debug\net8.0-windows\refint\Pet Shop Management.dll
+C:\Users\anshu\source\repos\Pet Shop Management\Pet Shop Management\obj\Debug\net8.0-windows\Pet Shop Management.pdb
+C:\Users\anshu\source\repos\Pet Shop Management\Pet Shop Management\obj\Debug\net8.0-windows\Pet Shop Management.genruntimeconfig.cache
+C:\Users\anshu\source\repos\Pet Shop Management\Pet Shop Management\obj\Debug\net8.0-windows\ref\Pet Shop Management.dll
+C:\Users\anshu\source\repos\Pet Shop Management\Pet Shop Management\obj\Debug\net8.0-windows\Pet_Shop_Management.SplashForm.resources
