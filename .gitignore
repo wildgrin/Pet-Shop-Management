@@ -1,1 +1,15 @@
+# Ignore Debug build files
+obj/Debug/
+bin/Debug/
+
+# Ignore Visual Studio temporary files, build results, and .vs folder
 .vs/
+*.user
+*.suo
+*.log
+
+# Ignore other generated files
+bin/
+obj/
+bin/Debug/
+obj/Debug/
