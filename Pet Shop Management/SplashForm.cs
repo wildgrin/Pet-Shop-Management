@@ -1,8 +1,8 @@
 namespace Pet_Shop_Management
 {
-    public partial class Form1 : Form
+    public partial class SplashForm : Form
     {
-        public Form1()
+        public SplashForm()
         {
             InitializeComponent();
         }
@@ -22,7 +22,7 @@ namespace Pet_Shop_Management
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void SplashForm_Load(object sender, EventArgs e)
         {
             timer1.Start();
         }

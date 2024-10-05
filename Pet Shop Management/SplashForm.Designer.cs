@@ -1,6 +1,6 @@
 ﻿namespace Pet_Shop_Management
 {
-    partial class Form1
+    partial class SplashForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -71,7 +71,7 @@
             // 
             timer1.Tick += timer1_Tick;
             // 
-            // Form1
+            // SplashForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -80,10 +80,10 @@
             Controls.Add(guna2ProgressBar1);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Form1";
+            Name = "SplashForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
-            Load += Form1_Load;
+            Text = "SplashForm";
+            Load += SplashForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

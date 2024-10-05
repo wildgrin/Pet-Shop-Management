@@ -13,22 +13,24 @@ namespace Pet_Shop_Management
 {
     public partial class UserModule : Form
     {
-        SqlConnection cn = new SqlConnection();
+        SqlConnection cn;
         SqlCommand cm = new SqlCommand();
-        dbConnect dbcon = new dbConnect();
+        DbConnect dbcon = new DbConnect();
         string title = "Pet Shop Management";
+        UserForm userForm;
 
-        public UserModule()
+        public UserModule(UserForm _userForm)
         {
             InitializeComponent();
-            cn = new SqlConnection(dbcon.connection());
+            cn  = new SqlConnection(dbcon.Connection());
+            userForm = _userForm;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
-                if (MessageBox.Show("Are you sure you want to register this user?", "User Registration", MessageBoxButtons.YesNo, MessageBoxIcon.Question )== DialogResult.Yes) ;
+                if (MessageBox.Show("Are you sure you want to register this user?", "User Registration", MessageBoxButtons.YesNo, MessageBoxIcon.Question )== DialogResult.Yes);
                 cm = new SqlCommand("INSERT INTO tbUser(name, address, phone, role, dob, password) VALUES(@name, @address, @phone, @role, @dob, @password)", cn);
                 cm.Parameters.AddWithValue("@name", txtName.Text);
                 cm.Parameters.AddWithValue("@address", txtAddress.Text);
@@ -41,6 +43,8 @@ namespace Pet_Shop_Management
                 cm.ExecuteNonQuery();
                 cn.Close();
                 MessageBox.Show("User has been registered successfully!", title);
+
+                userForm.LoadUser();
             }
             catch (Exception ex)
             {

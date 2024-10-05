@@ -92,14 +92,14 @@
             txtName.Location = new Point(219, 98);
             txtName.Name = "txtName";
             txtName.Size = new Size(523, 30);
-            txtName.TabIndex = 3;
+            txtName.TabIndex = 0;
             // 
             // txtPhone
             // 
             txtPhone.Location = new Point(219, 204);
             txtPhone.Name = "txtPhone";
             txtPhone.Size = new Size(523, 30);
-            txtPhone.TabIndex = 9;
+            txtPhone.TabIndex = 2;
             // 
             // label5
             // 
@@ -115,7 +115,7 @@
             txtAddress.Location = new Point(219, 151);
             txtAddress.Name = "txtAddress";
             txtAddress.Size = new Size(523, 30);
-            txtAddress.TabIndex = 11;
+            txtAddress.TabIndex = 1;
             // 
             // label6
             // 
@@ -140,7 +140,7 @@
             txtPass.Location = new Point(219, 361);
             txtPass.Name = "txtPass";
             txtPass.Size = new Size(523, 30);
-            txtPass.TabIndex = 15;
+            txtPass.TabIndex = 5;
             // 
             // label4
             // 
@@ -156,7 +156,7 @@
             dtDob.Location = new Point(219, 310);
             dtDob.Name = "dtDob";
             dtDob.Size = new Size(523, 30);
-            dtDob.TabIndex = 16;
+            dtDob.TabIndex = 4;
             // 
             // label7
             // 
@@ -174,7 +174,7 @@
             cbRole.Location = new Point(219, 257);
             cbRole.Name = "cbRole";
             cbRole.Size = new Size(523, 29);
-            cbRole.TabIndex = 18;
+            cbRole.TabIndex = 3;
             cbRole.SelectedIndexChanged += cbRole_SelectedIndexChanged;
             // 
             // label8
@@ -195,7 +195,7 @@
             btnSave.Location = new Point(219, 428);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(156, 50);
-            btnSave.TabIndex = 20;
+            btnSave.TabIndex = 6;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += btnSave_Click;
@@ -208,7 +208,7 @@
             btnUpdate.Location = new Point(403, 428);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(156, 50);
-            btnUpdate.TabIndex = 21;
+            btnUpdate.TabIndex = 7;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = false;
             btnUpdate.Click += btnUpdate_Click;
@@ -221,7 +221,7 @@
             btnCancel.Location = new Point(586, 428);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(156, 50);
-            btnCancel.TabIndex = 22;
+            btnCancel.TabIndex = 8;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = false;
             btnCancel.Click += btnCancel_Click;
