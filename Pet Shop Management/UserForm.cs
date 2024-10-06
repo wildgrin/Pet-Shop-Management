@@ -14,6 +14,7 @@ namespace Pet_Shop_Management
         {
             InitializeComponent();
             cn = new SqlConnection(dbcon.Connection());
+            LoadUser();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

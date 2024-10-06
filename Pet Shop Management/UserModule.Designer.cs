@@ -42,7 +42,7 @@
             label6 = new Label();
             label3 = new Label();
             txtPass = new TextBox();
-            label4 = new Label();
+            lblPass = new Label();
             dtDob = new DateTimePicker();
             label7 = new Label();
             cbRole = new ComboBox();
@@ -139,17 +139,18 @@
             // 
             txtPass.Location = new Point(219, 361);
             txtPass.Name = "txtPass";
+            txtPass.PasswordChar = '*';
             txtPass.Size = new Size(523, 30);
             txtPass.TabIndex = 5;
             // 
-            // label4
+            // lblPass
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(26, 366);
-            label4.Name = "label4";
-            label4.Size = new Size(95, 21);
-            label4.TabIndex = 14;
-            label4.Text = "Password:";
+            lblPass.AutoSize = true;
+            lblPass.Location = new Point(26, 366);
+            lblPass.Name = "lblPass";
+            lblPass.Size = new Size(95, 21);
+            lblPass.TabIndex = 14;
+            lblPass.Text = "Password:";
             // 
             // dtDob
             // 
@@ -169,6 +170,7 @@
             // 
             // cbRole
             // 
+            cbRole.DropDownStyle = ComboBoxStyle.DropDownList;
             cbRole.FormattingEnabled = true;
             cbRole.Items.AddRange(new object[] { "Administrator", "Cashier", "Employee" });
             cbRole.Location = new Point(219, 257);
@@ -179,6 +181,7 @@
             // 
             // label8
             // 
+            label8.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label8.AutoSize = true;
             label8.Location = new Point(26, 447);
             label8.Name = "label8";
@@ -189,6 +192,7 @@
             // 
             // btnSave
             // 
+            btnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnSave.BackColor = Color.FromArgb(3, 172, 220);
             btnSave.FlatAppearance.BorderSize = 0;
             btnSave.ForeColor = Color.White;
@@ -202,6 +206,7 @@
             // 
             // btnUpdate
             // 
+            btnUpdate.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnUpdate.BackColor = Color.FromArgb(255, 132, 44);
             btnUpdate.FlatAppearance.BorderSize = 0;
             btnUpdate.ForeColor = Color.White;
@@ -215,6 +220,7 @@
             // 
             // btnCancel
             // 
+            btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnCancel.BackColor = Color.Silver;
             btnCancel.FlatAppearance.BorderSize = 0;
             btnCancel.ForeColor = Color.White;
@@ -240,7 +246,7 @@
             btnClose.Name = "btnClose";
             btnClose.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnClose.Size = new Size(44, 29);
-            btnClose.TabIndex = 23;
+            btnClose.TabIndex = 9;
             btnClose.Text = "X";
             btnClose.Click += btnClose_Click;
             // 
@@ -258,7 +264,7 @@
             Controls.Add(label7);
             Controls.Add(dtDob);
             Controls.Add(txtPass);
-            Controls.Add(label4);
+            Controls.Add(lblPass);
             Controls.Add(label3);
             Controls.Add(txtAddress);
             Controls.Add(label6);
@@ -291,7 +297,7 @@
         private Label label7;
         private DateTimePicker dtDob;
         private TextBox txtPass;
-        private Label label4;
+        private Label lblPass;
         private Label label3;
         private Button btnSave;
         private Label label8;
