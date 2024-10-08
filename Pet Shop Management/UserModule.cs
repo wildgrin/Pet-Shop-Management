@@ -18,6 +18,7 @@ namespace Pet_Shop_Management
             InitializeComponent();
             cn = new SqlConnection(dbcon.Connection());
             userForm = _userForm;
+            cbRole.SelectedIndex = 0;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -52,7 +53,34 @@ namespace Pet_Shop_Management
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            try
+            {
+                CheckField();
+                if (check)
+                {
+                    if (MessageBox.Show("Are you sure you want to update this user?", "Update User", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) ;
+                    cm = new SqlCommand("UPDATE tbUser SET name=@name, address=@address, phone=@phone, role=@role, dob=@dob, password=@password WHERE id=@id", cn);
+                    cm.Parameters.AddWithValue("@id", lbluid.Text);
+                    cm.Parameters.AddWithValue("@name", txtName.Text);
+                    cm.Parameters.AddWithValue("@address", txtAddress.Text);
+                    cm.Parameters.AddWithValue("@phone", txtPhone.Text);
+                    cm.Parameters.AddWithValue("@role", cbRole.Text);
+                    cm.Parameters.AddWithValue("@dob", dtDob.Value);
+                    cm.Parameters.AddWithValue("@password", txtPass.Text);
 
+                    cn.Open();
+                    cm.ExecuteNonQuery();
+                    cn.Close();
+                    MessageBox.Show("User's data has been successfully updated!", title);
+
+                    userForm.LoadUser();
+                    this.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, title);
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -84,7 +112,7 @@ namespace Pet_Shop_Management
         #region Methods
 
         /// <summary>
-        /// Clear button Method
+        /// Clearing all fields Method
         /// </summary>
         public void Clear()
         {
@@ -94,6 +122,8 @@ namespace Pet_Shop_Management
             txtPhone.Clear();
             cbRole.SelectedIndex = 0;
             dtDob.Value = DateTime.Now;
+
+            btnUpdate.Enabled = false;
         }
 
         /// <summary>

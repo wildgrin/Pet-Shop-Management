@@ -47,8 +47,8 @@
             Column6 = new DataGridViewTextBoxColumn();
             Column7 = new DataGridViewTextBoxColumn();
             Column8 = new DataGridViewTextBoxColumn();
-            Column9 = new DataGridViewImageColumn();
-            Column10 = new DataGridViewImageColumn();
+            Edit = new DataGridViewImageColumn();
+            Delete = new DataGridViewImageColumn();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvUser).BeginInit();
             SuspendLayout();
@@ -59,7 +59,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1028, 21);
+            panel1.Size = new Size(1000, 21);
             panel1.TabIndex = 0;
             // 
             // panel2
@@ -69,7 +69,7 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 21);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1028, 59);
+            panel2.Size = new Size(1000, 59);
             panel2.TabIndex = 1;
             // 
             // btnAdd
@@ -105,7 +105,7 @@
             txtSearch.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSearch.Font = new Font("Segoe UI", 9F);
             txtSearch.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSearch.Location = new Point(814, 7);
+            txtSearch.Location = new Point(788, 7);
             txtSearch.Margin = new Padding(3, 4, 3, 4);
             txtSearch.Name = "txtSearch";
             txtSearch.PasswordChar = '\0';
@@ -130,15 +130,15 @@
             dgvUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvUser.ColumnHeadersHeight = 30;
             dgvUser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dgvUser.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8, Column9, Column10 });
-            dgvUser.Dock = DockStyle.Fill;
+            dgvUser.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8, Edit, Delete });
             dgvUser.EnableHeadersVisualStyles = false;
             dgvUser.Location = new Point(0, 80);
             dgvUser.Name = "dgvUser";
             dgvUser.RowHeadersVisible = false;
             dgvUser.RowHeadersWidth = 51;
-            dgvUser.Size = new Size(1028, 444);
+            dgvUser.Size = new Size(1000, 219);
             dgvUser.TabIndex = 2;
+            dgvUser.CellContentClick += dgvUser_CellContentClick;
             // 
             // Column1
             // 
@@ -146,7 +146,7 @@
             Column1.HeaderText = "No";
             Column1.MinimumWidth = 6;
             Column1.Name = "Column1";
-            Column1.Width = 64;
+            Column1.Width = 55;
             // 
             // Column2
             // 
@@ -154,7 +154,7 @@
             Column2.HeaderText = "ID";
             Column2.MinimumWidth = 6;
             Column2.Name = "Column2";
-            Column2.Width = 57;
+            Column2.Width = 50;
             // 
             // Column3
             // 
@@ -162,7 +162,7 @@
             Column3.HeaderText = "Name";
             Column3.MinimumWidth = 6;
             Column3.Name = "Column3";
-            Column3.Width = 93;
+            Column3.Width = 78;
             // 
             // Column4
             // 
@@ -177,7 +177,7 @@
             Column5.HeaderText = "Phone";
             Column5.MinimumWidth = 6;
             Column5.Name = "Column5";
-            Column5.Width = 96;
+            Column5.Width = 81;
             // 
             // Column6
             // 
@@ -185,7 +185,7 @@
             Column6.HeaderText = "Role";
             Column6.MinimumWidth = 6;
             Column6.Name = "Column6";
-            Column6.Width = 77;
+            Column6.Width = 66;
             // 
             // Column7
             // 
@@ -193,7 +193,7 @@
             Column7.HeaderText = "Date of Birth";
             Column7.MinimumWidth = 6;
             Column7.Name = "Column7";
-            Column7.Width = 147;
+            Column7.Width = 124;
             // 
             // Column8
             // 
@@ -201,30 +201,30 @@
             Column8.HeaderText = "Password";
             Column8.MinimumWidth = 6;
             Column8.Name = "Column8";
-            Column8.Width = 119;
+            Column8.Width = 104;
             // 
-            // Column9
+            // Edit
             // 
-            Column9.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            Column9.HeaderText = "Edit";
-            Column9.Image = (Image)resources.GetObject("Column9.Image");
-            Column9.MinimumWidth = 6;
-            Column9.Name = "Column9";
-            Column9.Width = 48;
+            Edit.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Edit.HeaderText = "Edit";
+            Edit.Image = (Image)resources.GetObject("Edit.Image");
+            Edit.MinimumWidth = 6;
+            Edit.Name = "Edit";
+            Edit.Width = 41;
             // 
-            // Column10
+            // Delete
             // 
-            Column10.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            Column10.HeaderText = "Delete";
-            Column10.Image = (Image)resources.GetObject("Column10.Image");
-            Column10.MinimumWidth = 6;
-            Column10.Name = "Column10";
-            Column10.Width = 75;
+            Delete.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Delete.HeaderText = "Delete";
+            Delete.Image = (Image)resources.GetObject("Delete.Image");
+            Delete.MinimumWidth = 6;
+            Delete.Name = "Delete";
+            Delete.Width = 64;
             // 
             // UserForm
             // 
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(1028, 524);
+            ClientSize = new Size(1000, 300);
             Controls.Add(dgvUser);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -252,7 +252,7 @@
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column7;
         private DataGridViewTextBoxColumn Column8;
-        private DataGridViewImageColumn Column9;
-        private DataGridViewImageColumn Column10;
+        private DataGridViewImageColumn Edit;
+        private DataGridViewImageColumn Delete;
     }
 }
