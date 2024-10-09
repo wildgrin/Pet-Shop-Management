@@ -75,6 +75,7 @@
             dgvProduct.RowHeadersWidth = 51;
             dgvProduct.Size = new Size(1000, 219);
             dgvProduct.TabIndex = 5;
+            dgvProduct.CellContentClick += dgvProduct_CellContentClick;
             // 
             // Column1
             // 

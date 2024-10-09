@@ -14,8 +14,8 @@ namespace Pet_Shop_Management
     public partial class ProductForm : Form
     {
         SqlConnection cn;
-        SqlCommand cm;
-        SqlDataReader dr;
+        SqlCommand? cm;
+        SqlDataReader? dr;
         DbConnect dbcon = new DbConnect();
         string title = "Pet Shop Management";
 
@@ -37,6 +37,36 @@ namespace Pet_Shop_Management
 
         }
 
+        private void dgvProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string colName = dgvProduct.Columns[e.ColumnIndex].Name;
+            if (colName == "Edit")
+            {
+                ProductModule productModule = new ProductModule(this);
+                productModule.lblPcode.Text = dgvProduct.Rows[e.RowIndex].Cells[1].Value.ToString();
+                productModule.txtName.Text = dgvProduct.Rows[e.RowIndex].Cells[2].Value.ToString();
+                productModule.txtType.Text = dgvProduct.Rows[e.RowIndex].Cells[3].Value.ToString();
+                productModule.cbCategory.Text = dgvProduct.Rows[e.RowIndex].Cells[4].Value.ToString();
+                productModule.txtQty.Text = dgvProduct.Rows[e.RowIndex].Cells[5].Value.ToString();
+                productModule.txtPrice.Text = dgvProduct.Rows[e.RowIndex].Cells[6].Value.ToString();
+
+                productModule.btnSave.Enabled = false;
+                productModule.btnUpdate.Enabled = true;
+                productModule.ShowDialog();
+            }
+            else if (colName == "Delete")
+            {
+                if (MessageBox.Show("Are you sure you want to delete this record?", "Delete Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                   
+                    dbcon.ExecuteQuery("Delete from tbProduct where pcode LIKE @productId");
+                    cm.Parameters.AddWithValue("@productId", dgvProduct.Rows[e.RowIndex].Cells[1].Value.ToString());
+                    MessageBox.Show("Product data has been successfully erased.", title, MessageBoxButtons.OK, MessageBoxIcon.Question);
+                }
+            }
+            LoadProduct();
+        }
+
         #region Methods
         public void LoadProduct()
         {
@@ -48,11 +78,20 @@ namespace Pet_Shop_Management
             while (dr.Read())
             {
                 i++;
-                dgvProduct.Rows.Add(i, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), DateTime.Parse(dr[5].ToString()).ToShortDateString(), dr[6].ToString());
+                dgvProduct.Rows.Add(
+                    i,
+                    dr[0].ToString(),
+                    dr[1].ToString(),
+                    dr[2].ToString(),
+                    dr[3].ToString(),
+                    dr[4].ToString(),
+                    dr[5].ToString()
+                );
             }
             dr.Close();
             cn.Close();
         }
         #endregion
+
     }
 }

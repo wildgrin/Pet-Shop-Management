@@ -164,6 +164,7 @@
             txtQty.Name = "txtQty";
             txtQty.Size = new Size(447, 26);
             txtQty.TabIndex = 3;
+            txtQty.KeyPress += txtQty_KeyPress;
             // 
             // label5
             // 

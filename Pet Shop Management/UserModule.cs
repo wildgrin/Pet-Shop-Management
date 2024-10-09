@@ -28,21 +28,24 @@ namespace Pet_Shop_Management
                 CheckField();
                 if (check)
                 {
-                    if (MessageBox.Show("Are you sure you want to register this user?", "User Registration", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) ;
-                    cm = new SqlCommand("INSERT INTO tbUser(name, address, phone, role, dob, password) VALUES(@name, @address, @phone, @role, @dob, @password)", cn);
-                    cm.Parameters.AddWithValue("@name", txtName.Text);
-                    cm.Parameters.AddWithValue("@address", txtAddress.Text);
-                    cm.Parameters.AddWithValue("@phone", txtPhone.Text);
-                    cm.Parameters.AddWithValue("@role", cbRole.Text);
-                    cm.Parameters.AddWithValue("@dob", dtDob.Value);
-                    cm.Parameters.AddWithValue("@password", txtPass.Text);
+                    if (MessageBox.Show("Are you sure you want to register this user?", "User Registration", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        cm = new SqlCommand("INSERT INTO tbUser(name, address, phone, role, dob, password) VALUES(@name, @address, @phone, @role, @dob, @password)", cn);
+                        cm.Parameters.AddWithValue("@name", txtName.Text);
+                        cm.Parameters.AddWithValue("@address", txtAddress.Text);
+                        cm.Parameters.AddWithValue("@phone", txtPhone.Text);
+                        cm.Parameters.AddWithValue("@role", cbRole.Text);
+                        cm.Parameters.AddWithValue("@dob", dtDob.Value);
+                        cm.Parameters.AddWithValue("@password", txtPass.Text);
 
-                    cn.Open();
-                    cm.ExecuteNonQuery();
-                    cn.Close();
-                    MessageBox.Show("User has been registered successfully!", title);
+                        cn.Open();
+                        cm.ExecuteNonQuery();
+                        cn.Close();
+                        MessageBox.Show("User has been registered successfully!", title);
 
-                    userForm.LoadUser();
+                        userForm.LoadUser();
+                        this.Dispose();
+                    }
                 }
             }
             catch (Exception ex)
@@ -58,23 +61,25 @@ namespace Pet_Shop_Management
                 CheckField();
                 if (check)
                 {
-                    if (MessageBox.Show("Are you sure you want to update this user?", "Update User", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) ;
-                    cm = new SqlCommand("UPDATE tbUser SET name=@name, address=@address, phone=@phone, role=@role, dob=@dob, password=@password WHERE id=@id", cn);
-                    cm.Parameters.AddWithValue("@id", lbluid.Text);
-                    cm.Parameters.AddWithValue("@name", txtName.Text);
-                    cm.Parameters.AddWithValue("@address", txtAddress.Text);
-                    cm.Parameters.AddWithValue("@phone", txtPhone.Text);
-                    cm.Parameters.AddWithValue("@role", cbRole.Text);
-                    cm.Parameters.AddWithValue("@dob", dtDob.Value);
-                    cm.Parameters.AddWithValue("@password", txtPass.Text);
+                    if (MessageBox.Show("Are you sure you want to update this user?", "Update User", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        cm = new SqlCommand("UPDATE tbUser SET name=@name, address=@address, phone=@phone, role=@role, dob=@dob, password=@password WHERE id=@id", cn);
+                        cm.Parameters.AddWithValue("@id", lbluid.Text);
+                        cm.Parameters.AddWithValue("@name", txtName.Text);
+                        cm.Parameters.AddWithValue("@address", txtAddress.Text);
+                        cm.Parameters.AddWithValue("@phone", txtPhone.Text);
+                        cm.Parameters.AddWithValue("@role", cbRole.Text);
+                        cm.Parameters.AddWithValue("@dob", dtDob.Value);
+                        cm.Parameters.AddWithValue("@password", txtPass.Text);
 
-                    cn.Open();
-                    cm.ExecuteNonQuery();
-                    cn.Close();
-                    MessageBox.Show("User's data has been successfully updated!", title);
+                        cn.Open();
+                        cm.ExecuteNonQuery();
+                        cn.Close();
+                        MessageBox.Show("User's data has been successfully updated!", title);
 
-                    userForm.LoadUser();
-                    this.Dispose();
+                        userForm.LoadUser();
+                        this.Dispose();
+                    }
                 }
             }
             catch (Exception ex)
@@ -127,7 +132,7 @@ namespace Pet_Shop_Management
         }
 
         /// <summary>
-        /// Required fields check in User Module
+        /// Required fields check
         /// </summary>
         public void CheckField()
         {
